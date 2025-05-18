@@ -1,0 +1,7 @@
+{
+  "name": "todo-frontend",
+  "compatibility_date": "2025-08-04",
+  "assets": {
+    "directory": "./build"
+  }
+}
