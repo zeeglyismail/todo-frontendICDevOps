@@ -27,12 +27,12 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.region }}
-          role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE_S3_AND_CLOUDFRONT_ZEEGLY}}
           role-session-name: deployment
 
       - name: Upload build artifacts to S3 bucket
         run: |
-          aws s3 cp --recursive ./build/ s3://amader-s3-bucket/todo-frontend/
+          aws s3 cp --recursive ./build/ s3://zeegly/todo-frontend-ismail/
       # - name: Invalidate cache of cloudfront distribution
       #   run: |
       #     aws cloudfront create-invalidation --distribution-id ${{ vars.CF_DISTRIBUTION_ID }} --paths "/*"
