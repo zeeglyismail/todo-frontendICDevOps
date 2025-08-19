@@ -5,7 +5,7 @@
 import '@testing-library/jest-dom';
 
 // Mock environment variables
-process.env.REACT_APP_API_URL = 'http://localhost:3001';
+process.env.REACT_APP_API_URL = 'http://3.95.158.178:3001';
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
